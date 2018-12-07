@@ -87,6 +87,8 @@ gulp.task('default', function () {
   sassToCssDist();
   imgToDist();
   jsToDist();
+  gulp.src('./index.html')
+  .pipe(gulp.dest('./dist/'));
   gulp.watch('./src/sass/*.scss', ['sassToDist']);
 });
 
